@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BenefitCard from "../components/BenefitCard.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import VehicleCard from "../components/VehicleCard.astro";
+import { benefits } from "../data/benefits";
+import { vehicles } from "../data/vehicles";
+---
+
+<BaseLayout
+  title="Prime Motors | Experiência automotiva demonstrativa"
+  description="Conheça a homepage demonstrativa da Prime Motors, nome provisório de uma experiência automotiva."
+>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img
+        class="hero-image"
+        src="/images/hero-city-atmosphere.webp"
+        alt="Carro em movimento em uma rua urbana ao entardecer. Foto ilustrativa, sem relação com os veículos demonstrativos."
+        fetchpriority="high"
+      />
+      <div class="hero-shade" aria-hidden="true"></div>
+      <SiteHeader />
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> Uma experiência automotiva</p>
+        <h1 id="hero-title">Escolhas que<br /><em>movem você.</em></h1>
+        <p class="hero-description">
+          Uma nova forma de descobrir veículos, com uma seleção demonstrativa e uma experiência pensada para cada caminho.
+        </p>
+        <a class="button button--light" href="#veiculos">
+          Explorar veículos <span aria-hidden="true">↗</span>
+        </a>
+        <p class="photo-credit">Foto ilustrativa · iam hogir / Pexels</p>
+      </div>
+
+      <nav class="chapter-rail" aria-label="Atalhos de seção">
+        <a href="#veiculos"><b>01</b><span>Veículos</span></a>
+        <a href="#diferenciais"><b>02</b><span>Diferenciais</span></a>
+        <a href="#sobre"><b>03</b><span>Sobre</span></a>
+      </nav>
+      <p class="demo-stamp">Nome, conteúdo e veículos demonstrativos</p>
+    </section>
+
+    <section class="section vehicles-section" id="veiculos" aria-labelledby="vehicles-title">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> 01 / Em destaque</p>
+            <h2 id="vehicles-title">Feitos para ir<br /><em>mais longe.</em></h2>
+          </div>
+          <p class="section-intro">
+            Uma prévia do que você vai encontrar por aqui. Modelos, especificações e preços abaixo são apenas demonstrativos.
+          </p>
+        </div>
+
+        <div class="vehicle-grid">
+          {vehicles.map((vehicle, index) => (
+            <VehicleCard vehicle={vehicle} index={index + 1} />
+          ))}
+        </div>
+        <p class="demo-note">
+          <span aria-hidden="true">i</span> Todos os veículos, dados e valores desta página são demonstrativos.
+        </p>
+      </div>
+    </section>
+
+    <section class="section benefits-section" id="diferenciais" aria-labelledby="benefits-title">
+      <div class="container benefits-grid">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> 02 / O que nos move</p>
+          <h2 id="benefits-title">Mais clareza em<br /><em>cada escolha.</em></h2>
+          <p class="section-intro">Uma proposta de atendimento construída em torno do que importa para você.</p>
+        </div>
+
+        <ol class="benefit-list">
+          {benefits.map((benefit, index) => <BenefitCard benefit={benefit} index={index + 1} />)}
+        </ol>
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre" aria-labelledby="about-title">
+      <img
+        src="/images/about-highway-sunset.webp"
+        alt="Rodovia urbana ao entardecer. Foto ilustrativa, sem relação com a concessionária."
+        loading="lazy"
+      />
+      <div class="about-shade" aria-hidden="true"></div>
+      <div class="container about-copy">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> 03 / Sobre a concessionária</p>
+        <h2 id="about-title">Uma jornada com<br /><em>mais intenção.</em></h2>
+        <p class="about-lead">Prime Motors é o nome provisório desta experiência automotiva.</p>
+        <p>
+          Este espaço apresenta uma proposta institucional inicial. A história, a identidade e as informações oficiais da concessionária serão definidas em uma próxima etapa.
+        </p>
+        <a class="quiet-link" href="#contato">Fale com a equipe <span aria-hidden="true">↗</span></a>
+        <small>Foto ilustrativa · German Korb / Pexels</small>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

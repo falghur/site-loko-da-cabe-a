@@ -1,0 +1,97 @@
+---
+import type { BenefitIcon } from "../types/benefit";
+
+interface Props {
+  name: BenefitIcon;
+}
+
+const { name } = Astro.props;
+---
+
+<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  {
+    name === "selection" && (
+      <>
+        <path
+          d="M8 26 24 10l16 16M13 22v16h22V22M20 38V27h8v11"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="m20 18 3 3 6-6"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </>
+    )
+  }
+  {
+    name === "transparency" && (
+      <>
+        <path
+          d="M24 7 38 13v10c0 9-5.7 14.5-14 18-8.3-3.5-14-9-14-18V13l14-6Z"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"
+        />
+        <path
+          d="m18 24 4 4 8-9"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </>
+    )
+  }
+  {
+    name === "personalized-service" && (
+      <>
+        <path
+          d="M24 40s-15-8.2-15-20a8.5 8.5 0 0 1 15-5.5A8.5 8.5 0 0 1 39 20c0 11.8-15 20-15 20Z"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M18 23h12M24 17v12"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </>
+    )
+  }
+  {
+    name === "financing" && (
+      <>
+        <rect
+          x="8"
+          y="12"
+          width="32"
+          height="25"
+          rx="3"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+        <path
+          d="M8 20h32M15 29h8M15 33h13"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+        <path
+          d="m31 28 2 2 4-5"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </>
+    )
+  }
+</svg>

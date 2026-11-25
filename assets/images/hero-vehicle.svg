@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1100" fill="none">
+  <defs>
+    <linearGradient id="background" x1="70" y1="70" x2="1190" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1c2024"/>
+      <stop offset=".55" stop-color="#111518"/>
+      <stop offset="1" stop-color="#080a0c"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="0" cy="0" r="1" gradientTransform="matrix(500 0 0 390 875 496)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a71d26" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#a71d26" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bodyPaint" x1="195" y1="450" x2="1116" y2="786" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e4e6e5"/>
+      <stop offset=".24" stop-color="#818a90"/>
+      <stop offset=".52" stop-color="#353d43"/>
+      <stop offset=".8" stop-color="#aeb5b8"/>
+      <stop offset="1" stop-color="#444b50"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="500" y1="432" x2="803" y2="592" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17232b"/>
+      <stop offset=".54" stop-color="#27353e"/>
+      <stop offset="1" stop-color="#0c1115"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="640" y1="760" x2="640" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090b0d" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#030405" stop-opacity=".86"/>
+    </linearGradient>
+    <pattern id="grid" width="84" height="84" patternUnits="userSpaceOnUse">
+      <path d="M84 0H0v84" stroke="#fff" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1280v1100H0z"/>
+  <path fill="url(#grid)" d="M0 0h1280v1100H0z"/>
+  <path fill="url(#redGlow)" d="M0 0h1280v1100H0z"/>
+  <path fill="#d9252e" fill-opacity=".2" d="m1080 0 200 0v1100h-33L1080 0Z"/>
+  <path fill="#f13a43" fill-opacity=".34" d="m1191 0 89 0v1100h-14L1191 0Z"/>
+  <path fill="url(#floor)" d="M0 724h1280v376H0z"/>
+  <path stroke="#aeb6ba" stroke-opacity=".1" d="M0 814h1280M0 867h1280M0 920h1280"/>
+  <ellipse cx="666" cy="804" fill="#000" fill-opacity=".72" rx="493" ry="69"/>
+  <ellipse cx="665" cy="798" fill="#b61c25" fill-opacity=".24" filter="url(#glow)" rx="386" ry="34"/>
+  <path fill="url(#bodyPaint)" stroke="#eef0ef" stroke-opacity=".47" stroke-width="3" d="m148 695 13-46c12-35 42-56 91-65l162-28 92-111c33-40 68-58 121-58h202c42 0 68 13 98 47l108 122 83 21c43 11 68 39 75 79l7 38-18 32h-80c-4-68-48-111-108-111-59 0-102 43-107 111H535c-4-68-48-111-108-111-59 0-102 43-107 111H180c-22 0-35-9-39-25l7-6Z"/>
+  <path fill="url(#glass)" stroke="#d6dcde" stroke-opacity=".5" stroke-width="3" d="m455 550 72-86c26-31 56-44 99-44h105v129H455Zm295 0V420h74c31 0 50 10 73 36l83 94H750Z"/>
+  <path stroke="#f3f4f4" stroke-opacity=".4" stroke-width="3" d="M730 420v132M454 555l-143 24m564-27 132 29"/>
+  <path stroke="#f13a43" stroke-width="7" d="m166 653 111-26m841-34 65 16"/>
+  <path fill="#d9252e" d="M1081 644h75l13 13-4 11h-94l10-24Z"/>
+  <path fill="#e8eff1" fill-opacity=".88" d="m169 675 94-24-16 19-82 22 4-17Z"/>
+  <circle cx="427" cy="691" r="85" fill="#080a0c" stroke="#737d83" stroke-width="8"/>
+  <circle cx="427" cy="691" r="56" fill="#252c31" stroke="#b7bec1" stroke-width="4"/>
+  <circle cx="427" cy="691" r="21" fill="#d9252e"/>
+  <path stroke="#90999e" stroke-width="4" d="M427 637v108m-54-54h108m-92-38 76 76m0-76-76 76"/>
+  <circle cx="975" cy="691" r="85" fill="#080a0c" stroke="#737d83" stroke-width="8"/>
+  <circle cx="975" cy="691" r="56" fill="#252c31" stroke="#b7bec1" stroke-width="4"/>
+  <circle cx="975" cy="691" r="21" fill="#d9252e"/>
+  <path stroke="#90999e" stroke-width="4" d="M975 637v108m-54-54h108m-92-38 76 76m0-76-76 76"/>
+  <path stroke="#fff" stroke-opacity=".18" stroke-width="2" d="m564 590 199 0m-184 15h49m277-13 102 0"/>
+</svg>

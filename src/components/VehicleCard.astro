@@ -1,0 +1,46 @@
+---
+import type { Vehicle } from "../types/vehicle";
+
+interface Props {
+  vehicle: Vehicle;
+  index: number;
+}
+
+const { vehicle, index } = Astro.props;
+const price = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+  maximumFractionDigits: 0,
+}).format(vehicle.priceBrl);
+---
+
+<article class="vehicle-card">
+  <div class="vehicle-image-wrap">
+    <img src={`/images/${vehicle.image}`} alt={vehicle.imageAlt} loading="lazy" />
+    <span class="demo-badge"><span aria-hidden="true">✦</span> Demonstração</span>
+    <span class="vehicle-image-label">Imagem ilustrativa</span>
+  </div>
+  <div class="vehicle-card-body">
+    <p class="vehicle-make">{vehicle.make}</p>
+    <div class="vehicle-title-row">
+      <h3>{vehicle.name}</h3>
+      <span class="vehicle-index">{String(index).padStart(2, "0")}</span>
+    </div>
+    <ul class="vehicle-specs" aria-label="Especificações demonstrativas">
+      <li><span>Ano</span><strong>{vehicle.year}</strong></li>
+      <li>
+        <span>Quilometragem</span>
+        <strong>{new Intl.NumberFormat("pt-BR").format(vehicle.mileage)} km</strong>
+      </li>
+    </ul>
+    <div class="vehicle-price-row">
+      <span>Preço demonstrativo</span><strong>{price}</strong>
+    </div>
+    <details class="vehicle-details">
+      <summary>Ver detalhes <span aria-hidden="true">↗</span></summary>
+      <p>
+        Marca, modelo, ano, quilometragem e valor são dados ilustrativos, sem vínculo com uma oferta real.
+      </p>
+    </details>
+  </div>
+</article>

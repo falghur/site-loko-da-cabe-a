@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#24232a" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/images/hero-vehicle.svg" />
+    <link rel="preload" as="image" href="/images/hero-city-atmosphere.webp" fetchpriority="high" />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "../scripts/site.ts";
+    </script>
+  </body>
+</html>

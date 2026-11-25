@@ -1,0 +1,19 @@
+---
+import type { Benefit } from "../types/benefit";
+
+interface Props {
+  benefit: Benefit;
+  index: number;
+}
+
+const { benefit, index } = Astro.props;
+---
+
+<li class:list={["benefit-item", { "benefit-item--demo": benefit.demonstration }]}>
+  <span class="benefit-index">{String(index).padStart(2, "0")}</span>
+  <div>
+    <h3>{benefit.title}</h3>
+    {benefit.label && <small class="benefit-label">{benefit.label}</small>}
+    <p>{benefit.description}</p>
+  </div>
+</li>
